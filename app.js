@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express();
 const config = require('./config/config');
 const MongoClient = require('mongodb').MongoClient;
-const url = 'https://enigmatic-hamlet-45263.herokuapp.com/';
+
+const url = 'https://enigmatic-hamlet-45263.herokuapp.com';
 app.use(express.json());
 
 let db;
