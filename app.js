@@ -6,7 +6,6 @@ const app = express();
 const config = require('./config/config');
 const MongoClient = require('mongodb').MongoClient;
 
-const url = 'https://enigmatic-hamlet-45263.herokuapp.com';
 app.use(express.json());
 
 let db;
@@ -61,8 +60,8 @@ app.use((req, res, next) => {
 const adminRoutes = require('./routes/adminRoutes')
 const userRoute = require('./routes/userRoutes');
 
-app.use(`${url}/api/admin/`, adminRoutes);
-app.use(`${url}/api/user/`, userRoute);
+app.use('/api/admin/', adminRoutes);
+app.use('/api/user/', userRoute);
 
 //using static
 app.use(express.static(__dirname + "/views"));
