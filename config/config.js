@@ -4,4 +4,3 @@ module.exports = {
     dbName: "medical",
     secret: "supersecretformedical"
 }
-
