@@ -1,0 +1,44 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Medicines Listing</h1>
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a routerLink="/sales">Home</a></li>
+                    <li class="breadcrumb-item active">Medicines Listing</li>
+                </ol>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<div class="container">
+    <table id="medicineTable" class="table">
+        <thead class="thead-dark text-center">
+            <tr>
+                <th>Medicine name</th>
+                <th>Medicine Price</th>
+                <th>Medicine Stock in stips</th>
+                <th>Total Tablet Stock</th>
+                <th>Medicine Expiry Date</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" *ngFor="let medicine of medicine.data">
+                <td>{{medicine.medicineName}}</td>
+                <td>{{medicine.mrp}}</td>
+                <td>{{medicine.totalStip}}</td>
+                <td>{{medicine.medicineInStip * medicine.totalStip}}</td>
+                <td>{{medicine.expiryDate | date :'dd-MM-YYYY'}}</td>
+                <td><button type="button" class="btn btn-warning btn-sm" (click)="editMedicine(medicine._id)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
