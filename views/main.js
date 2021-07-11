@@ -379,7 +379,7 @@ __webpack_require__.r(__webpack_exports__);
 class AuthService {
     constructor(http) {
         this.http = http;
-        this.APIURL = "https://enigmatic-hamlet-45263.herokuapp.com/api/";
+        this.APIURL = "https://mangla-hospital.herokuapp.com//api/";
         this.authToken = 'authToken';
         this.adminAuthToken = 'adminAuthToken';
     }
